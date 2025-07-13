@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root, :host {
-    --font-sans: "Karla";
+    --font-karla: "Karla";
     --spacing: 0.25rem;
     --breakpoint-md: 48rem;
     --text-sm: 0.875rem;
@@ -16,6 +16,7 @@
 .dark {
     --color-background: oklch(20.421% 0.01089 229.67);
     --color-foreground: oklch(.985 0 0);
+    --color-border: oklch(1 0 0 / 10%);
     --color-card: oklch(.205 0 0);
     --color-card-foreground: oklch(.985 0 0);
     --color-popover: oklch(.269 0 0);
@@ -29,7 +30,6 @@
     --color-accent: oklch(.371 0 0);
     --color-accent-foreground: oklch(.985 0 0);
     --color-destructive: oklch(.704 .191 22.216);
-    --color-border: oklch(1 0 0 / 10%);
     --color-input: oklch(1 0 0 / 15%);
     --color-ring: oklch(.556 0 0);
     --color-chart-1: oklch(.488 .243 264.376);
@@ -62,8 +62,8 @@ body {
     color: var(--color-foreground)
 }
 
-.font-sans {
-    font-family: var(--font-sans);
+.font-karla {
+    font-family: var(--font-karla);
 }
 
 .container-wrapper {
