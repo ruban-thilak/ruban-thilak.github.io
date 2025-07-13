@@ -1,5 +1,9 @@
+---
+import Theme from "../components/Theme.astro";
+---
+
 <!doctype html>
-<html lang="en" class="dark font-sans antialiased">
+<html lang="en" class="font-sans antialiased">
   <head>
     <meta charset="utf-8" /><meta
       name="viewport"
@@ -23,6 +27,14 @@
     <style type="text/css">
       @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&amp;display=swap");
     </style>
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body class="relative flex min-h-svh flex-col overflow-x-hidden antialiased">
     <nav class="border-grid bg-background sticky top-0 z-50 border-b">
@@ -34,27 +46,26 @@
           >
             ruban.thilak
           </a>
-          <div class="flex h-14 items-center justify-between">
-            <div class="space-x-4">
-              <a
-                class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
-                href="/"
-              >
-                home
-              </a>
-              <a
-                class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
-                href="/work"
-              >
-                experience
-              </a>
-              <a
-                class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
-                href="/projects"
-              >
-                projects
-              </a>
-            </div>
+          <div class="flex h-14 space-x-4 items-center justify-between">
+            <a
+              class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
+              href="/"
+            >
+              home
+            </a>
+            <a
+              class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
+              href="/work"
+            >
+              experience
+            </a>
+            <a
+              class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
+              href="/projects"
+            >
+              projects
+            </a>
+            <Theme />
           </div>
         </div>
       </div>

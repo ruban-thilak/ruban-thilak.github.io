@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root, :host {
     --font-sans: "Karla";
     --spacing: 0.25rem;
@@ -55,13 +57,13 @@ html, :host {
     -webkit-tap-highlight-color: transparent;
 }
 
-.font-sans {
-    font-family: var(--font-sans);
-}
-
-.bg-background, body {
+body {
     background-color: var(--color-background);
     color: var(--color-foreground)
+}
+
+.font-sans {
+    font-family: var(--font-sans);
 }
 
 .container-wrapper {
