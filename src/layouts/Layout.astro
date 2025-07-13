@@ -29,10 +29,10 @@
       <div class="container-wrapper">
         <div class="container flex justify-between items-center w-full px-4">
           <a
-            class="text-accent-foreground hover:text-primary text-sm font-medium"
+            class="text-accent-foreground hover:text-primary text-xl font-bold decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy decoration-red-500"
             href="/"
           >
-            @rubanthilak
+            ruban.thilak
           </a>
           <div class="flex h-14 items-center justify-between">
             <div class="space-x-4">
@@ -42,9 +42,9 @@
               >
                 home
               </a>
-							<a
+              <a
                 class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
-                href="/notes"
+                href="/work"
               >
                 experience
               </a>
@@ -54,17 +54,16 @@
               >
                 projects
               </a>
-							<a
-                class="text-accent-foreground hover:text-primary text-sm font-medium decoration-[0.1em] underline-offset-4 hover:underline hover:decoration-wavy"
-                href="/about"
-              >
-                contact
-              </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
     <slot />
+    <footer
+      class="flex items-center justify-center border-t border-grid bg-background p-4"
+    >
+      <span class="footer_footer-text">&copy; 2025 Ruban Thilak.</span>
+    </footer>
   </body>
 </html>

@@ -55,13 +55,13 @@ html, :host {
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    background-color: var(--color-background);
-    color: var(--color-foreground)
-}
-
 .font-sans {
     font-family: var(--font-sans);
+}
+
+.bg-background, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground)
 }
 
 .container-wrapper {
