@@ -1,0 +1,20 @@
+[
+  {
+    "href": "https://github.com/bia-technologies/lowkiq/pull/28",
+    "title": "Client-Side Middleware for Lowkiq Workers",
+    "repository": "bia-technologies/lowkiq",
+    "date": "Aug 10, 2022"
+  },
+  {
+    "href": "https://github.com/faker-ruby/faker/pull/2769",
+    "title": "HTML Generator Feature for Faker Library",
+    "repository": "faker-ruby/faker",
+    "date": "Aug 8, 2023"
+  },
+  {
+    "href": "https://github.com/freshworks/record_not_unique/pull/5",
+    "title": "Automated Code Quality and Unit Testing with GitHub Actions",
+    "repository": "freshworks/record_not_unique",
+    "date": "Jun 22, 2023"
+  }
+]
