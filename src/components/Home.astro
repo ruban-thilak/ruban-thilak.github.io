@@ -1,6 +1,6 @@
 ---
 import Hero from './home/Hero.astro';
-import PullRequests from './home/PullRequest.astro';
+import PullRequests from './pulls/PullRequest.astro';
 import Projects from './home/Projects.astro';
 import Skills from './home/Skills.astro';
 import Work from './home/Work.astro';
@@ -11,5 +11,5 @@ const notes = pullRequests.slice(0, 3);
 <Hero />
 <Work />
 <Projects />
-<PullRequests notes={notes} />
+<PullRequests notes={notes} onlySection />
 <Skills />

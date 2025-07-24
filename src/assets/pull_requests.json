@@ -1,20 +1,62 @@
 [
   {
     "href": "https://github.com/bia-technologies/lowkiq/pull/28",
-    "title": "Client-Side Middleware for Lowkiq Workers",
+    "title": "Client middleware for workers",
     "repository": "bia-technologies/lowkiq",
     "date": "Aug 10, 2022"
   },
   {
     "href": "https://github.com/faker-ruby/faker/pull/2769",
-    "title": "HTML Generator Feature for Faker Library",
+    "title": "HTML generator feature for Faker",
     "repository": "faker-ruby/faker",
     "date": "Aug 8, 2023"
   },
   {
     "href": "https://github.com/freshworks/record_not_unique/pull/5",
-    "title": "Automated Code Quality and Unit Testing with GitHub Actions",
+    "title": "Automated code quality and unit testing with Github Actions",
     "repository": "freshworks/record_not_unique",
     "date": "Jun 22, 2023"
+  },
+  {
+    "href": "https://github.com/freshworks/memoize_until/pull/12",
+    "title": "Github Actions - Rubocop and minitest",
+    "repository": "freshworks/memoize_until",
+    "date": "Apr 17, 2023"
+  },
+  {
+    "href": "https://github.com/bia-technologies/lowkiq/pull/34",
+    "title": "Github Actions - Rspec",
+    "repository": "freshworks/lowkiq",
+    "date": "Apr 19, 2023"
+  },
+  {
+    "href": "https://github.com/faker-ruby/faker/pull/2771",
+    "title": "Add type support for Faker::Types.rb_array",
+    "repository": "faker-ruby/faker",
+    "date": "Jun 20, 2023"
+  },
+  {
+    "href": "https://github.com/faker-ruby/faker/pull/2782",
+    "title": "Fix flaky specs for name and id",
+    "repository": "faker-ruby/faker",
+    "date": "Jun 20, 2023"
+  },
+  {
+    "href": "https://github.com/faker-ruby/faker/pull/2798",
+    "title": "Fix flaky specs for dota test_player",
+    "repository": "faker-ruby/faker",
+    "date": "Jul 8, 2023"
+  },
+  {
+    "href": "https://github.com/igorkasyanchuk/execution_time/pull/8",
+    "title": "Fix: ActiveRecord::LogSubscriber.reset_runtime is deprecated",
+    "repository": "igorkasyanchuk/execution_time",
+    "date": "May 28, 2025"
+  },
+  {
+    "href": "https://github.com/mperham/connection_pool/pull/199",
+    "title": "Add 3.4 to Rspec Github Actions",
+    "repository": "mperham/connection_pool",
+    "date": "Mar 21, 2025"
   }
 ]

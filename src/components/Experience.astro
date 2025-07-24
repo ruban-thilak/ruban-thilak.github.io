@@ -1,470 +1,230 @@
+---
+const experiences = [
+  {
+    company: "Freshworks",
+    logo: "/freshworks.png",
+    logoAlt: "",
+    logoWidth: 120,
+    logoHeight: 120,
+    period: "Oct 2023 - Present",
+    title: "Senior Software Engineer",
+    location: "Chennai",
+    companyUrl: "https://freshworks.com",
+    projects: [
+      {
+        name: "Workflow as a Service",
+        description: "",
+        bullets: [
+          "Collaborated with cross-functional teams to design and build Workflow as a Service, enabling scalable workflow orchestration across microservices.",
+          "Onboarded Kafka consumer into the alert management service to process events from WaaS.",
+          "Enhanced monitoring by implementing opentelemetry tracers for kafka consumer (internal).",
+        ],
+        skills: [
+          { name: "Rails", highlight: true },
+          { name: "Docker", highlight: false },
+          { name: "Kafka", highlight: false },
+          { name: "Scylla", highlight: false },
+          { name: "Conductor", highlight: false },
+          { name: "Spring Boot", highlight: false }
+        ]
+      },
+      {
+        name: "Observability and Enhancements",
+        description: "",
+        bullets: [
+          "Migrated alert management service from amd64 to arm64 image for better performance and cost optimization.",
+          "Upgraded alert management service to Rails 7.1 and Ruby 3.4.2 to remain updated with security updates and patches.",
+          "Configured Grafana dashboards, staging and production alerts using Alertmanager.",
+          "Worked with the site reliability team to migrate data from RedisLabs to an in-house Redis cluster, ensuring zero downtime and uninterrupted service availability.",
+        ],
+        skills: [
+          { name: "Rails", highlight: true },
+          { name: "Docker", highlight: false },
+          { name: "Kafka", highlight: false },
+          { name: "Redis", highlight: false },
+          { name: "Grafana", highlight: false },
+        ]
+      },
+      {
+        name: "Data Restoration",
+        description: "",
+        bullets: [
+          "Worked with the R&D team to build a service which provides data restoration accross distributed services.",
+          "Built Ruby SDK to act as a client to restore data in Mysql, Redis and Memcached.",
+          "Independently designed and developed the web interface for the restoration tool.",
+        ],
+        skills: [
+          { name: "Rails", highlight: true },
+          { name: "Tailwind", highlight: true },
+          { name: "Jquery", highlight: true },
+          { name: "Opentelemetry", highlight: false },
+          { name: "Mysql", highlight: false },
+          { name: "Redis", highlight: false },
+          { name: "Memcached", highlight: false },
+        ]
+      },
+    ]
+  },
+  {
+    company: "Freshworks",
+    logo: "/freshworks.png",
+    logoAlt: "",
+    logoWidth: 120,
+    logoHeight: 120,
+    period: "Nov 2021 - Oct 2023",
+    title: "Software Engineer",
+    location: "Chennai",
+    companyUrl: "https://freshworks.com",
+    projects: [
+      {
+        name: "Alert Management & Service Health Monitoring",
+        description: "",
+        bullets: [
+          "Working with the Alert management team at Freshworks on building a service which provides alert aggregation, correlation and audit trail.",
+          "Developed features in the alert management service while maintaining high availability, low-latency and high throughput.",
+          "Built Service discovery and health monitoring on top of the alert management service.",
+        ],
+        skills: [
+          { name: "Ruby", highlight: true },
+          { name: "Rails", highlight: true },
+          { name: "Emberjs", highlight: false },
+          { name: "MySql", highlight: false },
+          { name: "Redis", highlight: false }
+        ]
+      },
+      {
+        name: "Lowkiq and Opentelemetry",
+        description: "",
+        bullets: [
+          "Implemented OpenTelemetry Tracer (internal) to enable asynchronous tracing of job execution in Lowkiq.",
+          "Developed a client middleware (open-source) for Lowkiq workers, to integrate with OpenTelemetry instrumentation.",
+        ],
+        skills: [
+          { name: "Ruby", highlight: true },
+          { name: "Rails", highlight: true },
+          { name: "Lowkiq", highlight: false },
+          { name: "Opentelemetry", highlight: false },
+        ]
+      }
+    ]
+  },
+  {
+    company: "Cognizant",
+    logo: "/cognizant.png",
+    logoAlt: "",
+    period: "Dec 2020 - Nov 2021",
+    title: "Programmer Analyst",
+    location: "India (Remote)",
+    companyUrl: "https://cognizant.com",
+    logoWidth: 40,
+    logoHeight: 40,
+    projects: [
+      {
+        name: "Appian - Building application & Data pipeline",
+        description: "",
+        bullets: [
+          "Collaborated with fellow team members to build user interface and data pipeline to process data from client.",
+          "Managed production environment, and deployment of the application.",
+          "Engage with stakeholders to understand requirements and provide updates.",
+        ],
+        skills: [
+          { name: "Appian", highlight: true },
+          { name: "Java", highlight: false },
+          { name: "MySQL", highlight: false }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Zoho",
+    logo: "/zoho.png",
+    logoAlt: "",
+    period: "Feb 2020 - Nov 2020",
+    title: "Graduate Trainee",
+    location: "Chennai",
+    companyUrl: "https://zohocorp.com",
+    class: 'border-none',
+    logoWidth: 50,
+    logoHeight: 40,
+    projects: [
+      {
+        name: "Task & File Manager - Web Application",
+        description: "",
+        bullets: [
+          "Developed a C++ library to manage Windows tasks and files.",
+          "Exposed the functionality to Java servlets using Java Native Interface (JNI).",
+          "Integrated with web interface to enable remote access.",
+        ],
+        skills: [
+          { name: "Win32", highlight: true },
+          { name: "Ember.js", highlight: false },
+          { name: "Javascript", highlight: false },
+          { name: "C++", highlight: false },
+          { name: "Java", highlight: false },
+          { name: "Tomcat", highlight: false }
+        ]
+      },
+      {
+        name: "Landing Page & Websites",
+        description: "",
+        bullets: [
+          "Built landing pages and websites for Zoho products using HTML, CSS, Javascript and Jquery",
+        ],
+        skills: [
+          { name: "HTML", highlight: true },
+          { name: "CSS", highlight: false },
+          { name: "Javascript", highlight: false },
+          { name: "Jquery", highlight: false },
+        ]
+      }
+    ]
+  }
+];
+---
+
 <section class="border-grid border-b">
   <div class="container-wrapper">
-    <div class="container space-y-4 py-4">
-      <h2
-        class="px-4 text-3xl font-bold"
-      >
-        Experience
-      </h2>
-      <div class="flex items-start border-dashed border-b">
-        <div>
-          <img src="/freshworks.png" alt="" width="120" height="120" />
-        </div>
-        <div>
-          <p class="text-sm">Oct 2023 - Present</p>
-          <p class="text-lg font-bold">Senior Software Engineer</p>
-          <p class="text-sm">
-            <a target="_blank" href="https://freshworks.com">Freshworks</a>,
-            Chennai
-          </p>
-          <div class="mt-4">
-            <p class="font-bold">Project : Workflow Automator</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Docker
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Kafka
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Scylla
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Conductor
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Java
-              </p>
-            </div>
+    <div class="container py-4">
+      <h2 class="px-4 text-3xl font-bold">Experience</h2>
+      {experiences.map((exp) => (
+        <div class={`flex justify-between gap-4 border-dashed border-b px-4 py-8 ${exp.class ?? ""}`}>
+          <div class="max-w-16 max-h-16 min-w-16 min-h-16 rounded-sm flex items-center justify-center">
+            <img src={exp.logo} alt={exp.logoAlt ?? ""} width={exp.logoWidth} height={exp.logoHeight} />
           </div>
-          <div class="mt-4">
-            <p class="font-bold">Project : Data Restoration</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Docker
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Kafka
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Scylla
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Conductor
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Java
-              </p>
-            </div>
-          </div>
-          <div class="mt-4">
-            <p class="font-bold">Project : Rails Upgrade & Infra Optimization</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Docker
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Kafka
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Scylla
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Conductor
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Java
-              </p>
-            </div>
+          <div>
+            <p class="text-sm">{exp.period}</p>
+            <p class="text-lg font-bold">{exp.title}</p>
+            <p class="text-sm">
+              <a target="_blank" href={exp.companyUrl}>{exp.company}</a>, {exp.location}
+            </p>
+            {exp.projects.map((project, idx) => (
+              <div class="mt-4">
+                <p class="font-bold">
+                  Project{project.name.startsWith(":") || project.name.startsWith(" ") ? "" : " :"} {project.name}
+                </p>
+                <ul class="list-disc mt-4 pl-10 pr-10">
+                  {project.bullets.map((bullet) => (
+                    <li class="mt-2:first text-justify">{bullet}</li>
+                  ))}
+                </ul>
+                <div class="mt-6 flex flex-wrap items-center gap-2">
+                  {project.skills.map((skill) => (
+                    <p
+                      class={`${
+                        skill.highlight
+                          ? "bg-opacity-60"
+                          : "bg-opacity-50"
+                      } text-foreground border px-2 py-1.5 text-sm`}
+                    >
+                      {skill.name}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-      <div class="flex items-start border-dashed border-b">
-        <div>
-          <img src="/freshworks.png" alt="" width="120" height="120" />
-        </div>
-        <div>
-          <p class="text-sm">Nov 2021 - Oct 2023</p>
-          <p class="text-lg font-bold">Software Engineer</p>
-          <p class="text-sm">
-            <a target="_blank" href="https://freshworks.com">Freshworks</a>,
-            Chennai
-          </p>
-          <div class="mt-4">
-            <p class="font-bold">Project : Alert Management</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Ruby
-              </p>
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Emberjs
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                MySql
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Redis
-              </p>
-            </div>
-          </div>
-          <div class="mt-8">
-            <p class="font-bold">Project : Service Health Monitoring</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Ruby
-              </p>
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Emberjs
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                MySql
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Redis
-              </p>
-            </div>
-          </div>
-          <div class="mt-8">
-            <p class="font-bold">Project : Lowkiq Opentelemetry</p>
-            <ul class="list-disc mt-4 pl-10">
-              <li>
-                Working with the API-Gateway team at Freshworks on building a
-                service which provides api-throttling and rate-limiting.
-              </li>
-              <li class="mt-2">
-                Developed features in the rate-limiting service while
-                maintaining the core tenets of having low-latency and high
-                throughput.
-              </li>
-              <li class="mt-2">
-                Worked on tuning reverse proxy - Envoy, for improved performance
-                of rate-limiting service to process more than half a billion
-                requests a day at 1ms
-              </li>
-              <li class="mt-2">
-                Open-source feature contributions to Envoy (a CNCF graduated
-                project).
-              </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Ruby
-              </p>
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Rails
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Emberjs
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                MySql
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Redis
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex items-start border-dashed border-b">
-        <div class="w-24 h-14 rounded-sm bg-white flex items-center justify-center m-4">
-          <img src="/cognizant.png" />
-        </div>
-        <div>
-          <p class="text-sm">Dec 2020 - Nov 2021</p>
-          <p class="text-lg font-bold">Programmer Analyst</p>
-          <p class="text-sm">
-            <a target="_blank" href="https://zohocorp.com">Cognizant</a>,
-            India (Remote)
-          </p>
-          <div class="mt-4">
-            <p class="font-bold">Project: Appian - Building application & Data pipeline</p>
-            <ul class="list-disc mt-4 pl-10">
-                <li>
-                Developed a C++ shared library using the Win32 API to handle native Windows task and file management operations.
-                </li>
-                <li class="mt-2">
-                  Built a Java API (Servlets) to expose native features, connecting the C++ library via Java Native Intefaces.
-                </li>
-                <li class="mt-2">
-                Integrated the Java API with a web interface built using Ember.js, enabling remote access and management.
-                </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Win32
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Ember.js
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Javascript
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                C++
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Java
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Tomcat
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex items-start border-dashed border-b">
-        <div class="w-[100px] flex items-center justify-center p-1 m-4">
-          <img src="/zoho.png" />
-        </div>
-        <div>
-          <p class="text-sm">Feb 2020 - Nov 2020</p>
-          <p class="text-lg font-bold">Graduate Trainee</p>
-          <p class="text-sm">
-            <a target="_blank" href="https://zohocorp.com">Zoho</a>,
-            Chennai
-          </p>
-          <div class="mt-4">
-            <p class="font-bold">Project: Task & File Manager - Web Application</p>
-            <ul class="list-disc mt-4 pl-10">
-                <li>
-                Developed a C++ shared library using the Win32 API to handle native Windows task and file management operations.
-                </li>
-                <li class="mt-2">
-                  Built a Java API (Servlets) to expose native features, connecting the C++ library via Java Native Intefaces.
-                </li>
-                <li class="mt-2">
-                Integrated the Java API with a web interface built using Ember.js, enabling remote access and management.
-                </li>
-            </ul>
-            <div class="mt-6 flex flex-wrap items-center gap-2">
-              <p
-                class="bg-opacity-60 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Win32
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Ember.js
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Javascript
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                C++
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Java
-              </p>
-              <p
-                class="bg-opacity-50 text-foreground border px-2 py-1.5 text-sm"
-              >
-                Tomcat
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>
