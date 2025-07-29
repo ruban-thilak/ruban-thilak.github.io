@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="flex-grow pt-10">
+  <main class="flex-grow pt-10 border-dashed border-b">
     <section
-      class="flex flex-col items-center justify-center min-h-[70vh] px-4 py-20"
+      class="flex flex-col container-wrapper items-center justify-center min-h-[70vh] px-4 py-20"
     >
       <h1 class="text-3xl font-bold text-gray-100">404</h1>
       <p class="text-2xl mt-4 text-gray-300">Oops! Page not found.</p>
@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
       <a
         href="/"
-        class="mt-8 inline-block px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded shadow transition"
+        class="mt-8 bg-muted/60 text-foreground border p-2 px-4 rounded"
       >
         Go Back Home
       </a>

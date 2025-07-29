@@ -1,0 +1,132 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+  {
+    title: "Osiris",
+    description: [
+      "An Online platform that helps farmers to sell their products to customers. Crafted using Flutter and Django REST Framework.",
+    ],
+    credits: {
+      name: "REST API Credits",
+      profile: "Kalid Ahamed",
+      link: "https://github.com/admkhalid/osiris_server",
+    },
+    buttons: [{
+      text: "Visit Repo",
+      link: "https://github.com/Rubanthilak/osiris-frontend",
+    }],
+    media: {
+      type: "image",
+      src: "/img1.png",
+      alt: "img1.png",
+    },
+  },
+  {
+    title: "Sticky Board",
+    description: [
+      "Kanban-styled windows app for Bounty Hunters made with Vuejs and Pouchdb.",
+    ],
+    buttons: [
+      {
+        text: "Visit Repo",
+        link: "https://github.com/Rubanthilak/kanban-board",
+      },
+      {
+        text: "Download App",
+        link: "https://github.com/Rubanthilak/kanban-board/releases/download/v1.0/Kanban.Board.Setup.1.0.0.exe",
+      },
+    ],
+    media: {
+      type: "video",
+      src: "/video1.mp4",
+    },
+  },
+  {
+    title: "Movie Buff",
+    description: [
+      "Single Page Application created using Vanilla JavaScript and OMDb API.",
+    ],
+    buttons: [{
+      text: "Visit Repo",
+      link: "https://github.com/Rubanthilak/tv-on-demand",
+    }],
+    media: {
+      type: "video",
+      src: "/video2.mp4",
+    },
+  },
+];
+---
+
+<Layout>
+  <div
+    class="container-wrapper p-6 pb-0"
+  >
+    <h2
+      class="text-xl leading-tight font-bold tracking-tighter sm:text-2xl md:text-3xl lg:leading-[1.1]"
+    >
+      Projects
+    </h2>
+    <p class="mt-4 border-b border-gray-200 pb-4 border-dashed text-gray-500">
+        I enjoy experimenting with a wide range of technologies—whether they're new, established, or experimental. I use whichever programming language best fits the task, and I typically design everything myself. It keeps things interesting and challenging!
+    </p>
+  </div>
+  {
+    projects.map((project) => (
+      <section class="border-dashed border-b px-6">
+        <div class="container-wrapper flex flex-col p-6">
+          <div>
+            <div class="rounded-lg overflow-hidden text-center flex items-center justify-start h-full">
+              {project.media.type === "image" ? (
+                <img
+                  class="w-[400px]"
+                  src={project.media.src}
+                  alt={project.media.alt}
+                />
+              ) : (
+                <video class="shadow" autoplay loop>
+                  <source src={project.media.src} type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+              )}
+            </div>
+          </div>
+          <div class="mt-4 pr-8 flex justify-start items-start flex-col">
+            <h1 class="font-black text-2xl">{project.title}</h1>
+            {project.description.map((desc) => (
+              <p
+                class="text-justify text-sm text-gray-400 mt-2"
+                set:html={desc}
+              />
+            ))}
+            {project.credits && (
+              <div class="mt-2 text-sm text-gray-500">
+                <span class="font-bold">{project.credits.name}:</span>
+                <a
+                  href={project.credits.link}
+                  target="_blank"
+                  class="text-blue-500 font-semibold hover:underline"
+                >
+                  {project.credits.profile}
+                </a>
+              </div>
+            )}
+            <div class="flex flex-wrap items-center gap-4 mt-4">
+            {project.buttons.map((button) => (
+              <a
+                href={button.link}
+                target="_blank"
+                class="bg-muted/60 text-xs font-bold border p-2 px-4 hover:bg-muted/70 transition-colors"
+              >
+                {button.text}
+              </a>
+            ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    ))
+  }
+</Layout>

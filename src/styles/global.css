@@ -88,3 +88,7 @@ body, .bg-background {
     border-style: dashed;
     border-color: color-mix(in oklab, var(--color-border) 70%, transparent);
 }
+
+.border-dashed {
+    border-color: var(--color-border);
+}
